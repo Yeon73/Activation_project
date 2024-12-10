@@ -1,0 +1,69 @@
+{% extends '../layout/layout.html' %} {% block css %}
+
+<link rel="stylesheet" href="/css/user/mypage.css" />
+
+{% endblock %} {% block content %}
+<div id="page_wrap">
+  <div id="header_wrap">
+    <div id="header">
+      <h1 id="logo">
+        <a href="/"><img src="https://i.postimg.cc/hjKZgQ6x/team-logo.png" /></a>
+        <span>My Page</span>
+        <input type="hidden" name="nickname" value="{{nickname}}" />
+      </h1>
+      <div id="pointbox">
+        <span>All Points :</span>
+        <span id="point">480</span>
+        <span>pt</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="contents_wrap">
+    <div id="contents_header">
+      <div id="button">
+        <button id="btn_board">My 게시글</button>
+        <button id="btn_comment">My 댓글</button>
+        <button id="btn_like">My 좋아요</button>
+      </div>
+      <div id="imgbox">
+        <img src="/img/loap.png" />
+        <img src="/img/loap.png" />
+        <img src="/img/loap.png" />
+      </div>
+      <div id="total">
+        <div>
+          <span>Boards :</span>
+          <span id="total_board"></span>
+        </div>
+        <div>
+          <span>Comments :</span>
+          <span id="total_comment"></span>
+        </div>
+        <div>
+          <span>Likes :</span>
+          <span id="total_like"></span>
+        </div>
+      </div>
+      <div id="imgbox2">
+        <img src="/img/loap.png" />
+        <img src="/img/loap.png" />
+        <img src="/img/loap.png" />
+      </div>
+    </div>
+
+    <div id="contents_body">
+      <ul></ul>
+    </div>
+
+    <div id="btn">
+      <button>뒤로가기</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block js %}
+
+<script type="module" src="/js/module/mypage.js"></script>
+
+{% endblock %}

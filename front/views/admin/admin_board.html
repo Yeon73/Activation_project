@@ -1,0 +1,79 @@
+{% extends '../layout/layout.html' %} {% block css %}
+
+<link rel="stylesheet" href="/css/admin/admin_header.css" />
+<link rel="stylesheet" href="/css/admin/admin_board.css" />
+
+{% endblock %} {% block content %}
+
+<div id="admin_wrap">
+  {% include "../layout/admin_header.html" %}
+
+  <div id="admin_content">
+    <div id="admin_menu">
+      <ul>
+        <li>
+          <img src="https://i.postimg.cc/rF6Mc2g2/Vector.png" />
+          <a href="/admins">Overview</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/0j7grrZR/Vector-1.png" />
+          <a href="/admins/users">Users</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/XN56sDWH/Vector-2.png" />
+          <a href="/admins/boards">Boards</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/2Skp8kZM/Vector-3.png" />
+          <a href="/admins/comments">Comments</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="admin_allusers">
+      <div id="allusers_header">
+        <div id="allusers">
+          All Boards
+          <div id="selectbox">
+            <!-- <select class="admin_category">
+              <option>전체</option>
+              <option>Q&A</option>
+              <option>커뮤니티</option>
+            </select>
+            <select class="admin_category">
+              <option>전체</option>
+              <option>일상이야기</option>
+              <option>모임</option>
+            </select> -->
+            <img src="https://i.postimg.cc/mhxdqsxb/Vector.png" />
+            <select id="category_sort">
+              <option value="latest" checked>최신순</option>
+              <option value="old">오래된순</option>
+            </select>
+          </div>
+        </div>
+        <ul>
+          <li class="users_info">Profile</li>
+          <li class="users_info">BoardIdx</li>
+          <li class="users_info">Nickname</li>
+          <li class="users_info">Title</li>
+          <li class="users_info">Register Date</li>
+          <li class="users_info">Hits</li>
+          <li class="users_info">Right</li>
+        </ul>
+      </div>
+      <div id="allusers_body">
+        <ul></ul>
+        <div id="admin_page">
+          <span id="totalListNum"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block js %}
+
+<script type="module" src="/js/module/admin_board_list.js"></script>
+
+{% endblock %}

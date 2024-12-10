@@ -1,17 +1,35 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+const express = require("express");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
-const app = express();
+class App {
+  constructor() {
+    this.app = express();
+    this.setMiddleWare();
+    this.setRouting();
+    this.setStatic();
+    this.errorHandler();
+  }
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+  setMiddleWare() {
+    this.app.use(cors({ origin: true, credentials: true }));
+    this.app.use(cookieParser());
+    this.app.use(express.json());
+  }
 
-// Example route
-app.get('/', (req, res) => {
-  res.send('Welcome to the backend!');
-});
+  setRouting() {
+    this.app.use(require("./routes"));
+  }
 
-module.exports = app;
+  setStatic() {
+    this.app.use(express.static("uploads"));
+  }
+
+  errorHandler() {
+    this.app.use((err, req, res, next) => {
+      res.status(500).send(err.message);
+    });
+  }
+}
+
+module.exports = new App().app;

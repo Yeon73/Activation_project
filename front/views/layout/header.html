@@ -1,0 +1,140 @@
+<div id="header_wrap">
+  <div id="header">
+    <input type="hidden" value="{{server}}" id="server" />
+    <div id="logo">
+      <a href="/">
+        <img src="/img/header_logo.png" alt="header_logo" />
+      </a>
+    </div>
+    <div id="category_box">
+      <ul id="category">
+        <li></li>
+      </ul>
+    </div>
+
+    <div id="login_signin_box">
+      {% if nickname %} {% if access === 'ok' %}
+      <div id="profile">
+        <div id="usernick" data-usernick="{{nickname}}">{{nickname}}님</div>
+        <div id="profile_btn">
+          {% if image %}
+
+          <img src="{{image}}" alt="modify_img" data-userimage="{{image}}" />
+
+          <ul id="profile_menu">
+            {% if level === 'top' %}
+            <li id="admin_info">
+              <a id="admin_page" href="/admins">관리자 페이지</a>
+            </li>
+
+            {% else %} {% endif %}
+            <li id="profile_info">
+              <a id="my_page" href="/users/profile">마이 프로필</a>
+            </li>
+            <li id="profile_info">
+              <a id="my_page" href="/users/mypage">마이 페이지</a>
+            </li>
+            <li id="logout">
+              <a id="logout_btn" href="/">로그아웃</a>
+            </li>
+          </ul>
+
+          <script>
+            const logout = document.querySelector("#logout");
+            logout.addEventListener("click", (e) => {
+              e.preventDefault();
+              location.href = "/";
+              document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+            });
+
+            const profile_btn = document.querySelector("#profile_btn");
+            const profile_menu = document.querySelector("#profile_menu");
+
+            profile_btn.addEventListener("click", () => {
+              profile_menu.style.visibility = "visible";
+            });
+
+            //   profile_btn.addEventListener("click", () => {
+            //     profile_menu.style.display = "none";
+            //   });
+          </script>
+          {% else %}
+
+          <img src="/img/profile_img.png" alt="modify_img" data-userimage="/img/profile_img.png" />
+
+          <ul id="profile_menu">
+            {% if level === 'top' %}
+            <li id="admin_info">
+              <a id="admin_page" href="/admins">관리자 페이지</a>
+            </li>
+
+            {% else %} {% endif %}
+            <li id="profile_info">
+              <a id="my_page" href="/users/profile">마이 프로필</a>
+            </li>
+            <li id="profile_info">
+              <a id="my_page" href="/users/mypage">마이 페이지</a>
+            </li>
+            <li id="logout">
+              <a id="logout_btn" href="/">로그아웃</a>
+            </li>
+          </ul>
+
+          <script type="text/javascript">
+            const logout1 = document.querySelector("#logout");
+            logout1.addEventListener("click", (e) => {
+              e.preventDefault();
+              location.href = "/";
+              document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+            });
+
+            const profile_btn1 = document.querySelector("#profile_btn");
+            const profile_menu1 = document.querySelector("#profile_menu");
+
+            profile_btn1.addEventListener("click", () => {
+              profile_menu1.style.visibility = "visible";
+            });
+
+            //   profile_btn.addEventListener("click", () => {
+            //     profile_menu.style.display = "none";
+            //   });
+          </script>
+          {% endif %}
+        </div>
+      </div>
+
+      {% elif access === 'deny' %}
+      <div id="login">
+        <a id="login_btn" href="/users/signin">로그인</a>
+      </div>
+      <div id="signin">
+        <a id="signin_btn" href="/users/terms">회원가입</a>
+      </div>
+
+      <script type="text/javascript">
+        document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+        alert("당신은 본 커뮤니티 사이트에 대한 접근이 거부된 회원입니다.");
+      </script>
+
+      {% else %}
+      <div id="login">
+        <a id="login_btn" href="/users/signin">로그인</a>
+      </div>
+      <div id="signin">
+        <a id="signin_btn" href="/users/terms">회원가입</a>
+      </div>
+
+      {% endif %} {% else %}
+      <div id="login">
+        <a id="login_btn" href="/users/signin">로그인</a>
+      </div>
+      <div id="signin">
+        <a id="signin_btn" href="/users/terms">회원가입</a>
+      </div>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script src="/js/layout/header.js" type="module"></script>

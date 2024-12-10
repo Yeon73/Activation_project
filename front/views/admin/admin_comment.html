@@ -1,0 +1,109 @@
+{% extends '../layout/layout.html' %} {% block css %}
+
+<link rel="stylesheet" href="/css/admin/admin_header.css" />
+<link rel="stylesheet" href="/css/admin/admin_comment.css" />
+
+{% endblock %} {% block content %}
+
+<div id="admin_wrap">
+  {% include "../layout/admin_header.html" %}
+
+  <div id="admin_content">
+    <div id="admin_menu">
+      <ul>
+        <li>
+          <img src="https://i.postimg.cc/rF6Mc2g2/Vector.png" />
+          <a href="/admins">Overview</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/0j7grrZR/Vector-1.png" />
+          <a href="/admins/users">Users</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/XN56sDWH/Vector-2.png" />
+          <a href="/admins/boards">Boards</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/2Skp8kZM/Vector-3.png" />
+          <a href="/admins/comments">Comments</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="admin_allusers">
+      <div id="allusers_header">
+        <div id="allusers">
+          All Comments
+          <div id="selectbox">
+            <select class="admin_category">
+              <option>전체</option>
+              <option>Q&A</option>
+              <option>커뮤니티</option>
+            </select>
+            <select class="admin_category">
+              <option>전체</option>
+              <option>일상이야기</option>
+              <option>모임</option>
+            </select>
+            <img src="https://i.postimg.cc/mhxdqsxb/Vector.png" />
+            <select id="category_sort">
+              <option>Sort</option>
+              <option>최신순</option>
+              <option>조회순</option>
+            </select>
+          </div>
+        </div>
+        <ul>
+          <li class="users_info">Profile</li>
+          <li class="users_info">User Id</li>
+          <li class="users_info">Comments</li>
+          <li class="users_info">Register Date</li>
+          <li class="users_info">Remove</li>
+        </ul>
+      </div>
+      <div id="allusers_body">
+        <ul>
+          <li>
+            <ul>
+              <li class="users_info">
+                <img src="https://i.postimg.cc/YC2g7C6h/Ellipse-3.png" />
+              </li>
+              <li class="users_info">burgerKing</li>
+              <li class="users_info">Just joking, Sorry Bro</li>
+              <li class="users_info">2023-02-01</li>
+              <li class="users_info">
+                <img src="https://i.postimg.cc/fTCt8QGZ/Vector-1.png" />
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li class="users_info">
+                <img src="https://i.postimg.cc/YC2g7C6h/Ellipse-3.png" />
+              </li>
+              <li class="users_info">gch02933</li>
+              <li class="users_info">jonghwan</li>
+              <li class="users_info">Jerry</li>
+              <li class="users_info">
+                <img src="https://i.postimg.cc/fTCt8QGZ/Vector-1.png" />
+              </li>
+            </ul>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div id="admin_page">
+          <span>Total Comments: 80</span>
+          <span>Page: 10</span>
+          <img src="https://i.postimg.cc/7YkWrdKf/Vector-2.png" />
+          <img src="https://i.postimg.cc/5tTs7RH9/Vector-3.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

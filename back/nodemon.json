@@ -1,6 +1,0 @@
-{
-    "watch": ["server.js", "app.js", "config/"],
-    "ext": "js,json",
-    "ignore": ["node_modules/"],
-    "delay": "100"
-  }  
