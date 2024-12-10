@@ -40,29 +40,29 @@ class AdminRepository {
     }
   }
 
-  // async userDestroy({ nickname }) {
-  //   try {
-  //     const user_remove = await this.User.destroy({
-  //       where: { nickname },
-  //     });
-  //     console.log("check #### : ", user_remove);
-  //     return user_remove;
-  //   } catch (e) {
-  //     next(e);
-  //   }
-  // }
+  async userDestroy({ nickname }) {
+    try {
+      const user_remove = await this.User.destroy({
+        where: { nickname },
+      });
+      console.log("check #### : ", user_remove);
+      return user_remove;
+    } catch (e) {
+      next(e);
+    }
+  }
 
-  // async boardList() {
-  //   try {
-  //     const boardList = await this.Board.findAll({
-  //       raw: true,
-  //     });
-  //     // console.log("check #### : ", boardList);
-  //     return boardList;
-  //   } catch (e) {
-  //     throw new Error(e);
-  //   }
-  // }
+  async boardList() {
+    try {
+      const boardList = await this.Board.findAll({
+        raw: true,
+      });
+      // console.log("check #### : ", boardList);
+      return boardList;
+    } catch (e) {
+      throw new Error(e);
+    }
+  }
 
   async findAndCountAll({ mainidx, subidx, page, maxBoards, target, sort }) {
     try {

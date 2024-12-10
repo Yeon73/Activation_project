@@ -14,13 +14,13 @@ router.post("/:boardidx", (req, res, next) =>
   controller.putBoard(req, res, next)
 );
 
-// router.delete("/:nickname", (req, res, next) =>
-//   controller.deleteUser(req, res, next)
-// );
+router.delete("/:nickname", (req, res, next) =>
+  controller.deleteUser(req, res, next)
+);
 
-// router.get("/boardlist", (req, res, next) =>
-//   controller.getBoardList(req, res, next)
-// );
+router.get("/boardlist", (req, res, next) =>
+  controller.getBoardList(req, res, next)
+);
 
 router.get("/boardlist", (req, res, next) =>
   controller.getBoardList(req, res, next)
