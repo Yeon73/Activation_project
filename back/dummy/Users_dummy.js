@@ -18,6 +18,13 @@ const Users = [
     nickname: "web",
     email: "web7722@gmail.com",
   },
+  {
+    userid: "yun7373",
+    password: "aadf6655fea0d63eff3b6c2f366981486da0ada2384c938b2a76232bbc63faad",
+    nickname: "kite0473",
+    email: "rlaquddus7373@gmail.com",
+    level: "top",
+  },
 ];
 
 module.exports = Users;
