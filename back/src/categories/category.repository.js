@@ -20,16 +20,16 @@ class CategoryRepository {
     }
   }
 
-  //   async findSubCategory({ mainidx, subidx }) {
-  //     try {
-  //       if (!subidx) {
-  //         const result = await this.SubCategories.findAll({ where: { mainidx }, attributes: { exclude: "id" }, raw: true });
-  //         return result;
-  //       }
-  //     } catch (e) {
-  //       throw new Error(e);
-  //     }
-  //   }
+    async findSubCategory({ mainidx, subidx }) {
+      try {
+        if (!subidx) {
+          const result = await this.SubCategories.findAll({ where: { mainidx }, attributes: { exclude: "id" }, raw: true });
+          return result;
+        }
+      } catch (e) {
+        throw new Error(e);
+      }
+    }
 }
 
 module.exports = CategoryRepository;

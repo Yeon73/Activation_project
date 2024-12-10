@@ -7,9 +7,9 @@ router.get("/users", (req, res, next) => controller.getUsers(req, res, next));
 router.post("/userModify/:nickname", (req, res, next) =>
   controller.updateUser(req, res, next)
 );
-// router.post("/users/:nickname", (req, res, next) =>
-//   controller.deleteUser(req, res, next)
-// );
+router.post("/users/:nickname", (req, res, next) =>
+  controller.deleteUser(req, res, next)
+);
 router.get("/boards", (req, res, next) => controller.getBoards(req, res, next));
 router.post("/boardModify/:boardidx", (req, res, next) =>
   controller.updateBoard(req, res, next)

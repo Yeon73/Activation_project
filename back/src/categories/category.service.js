@@ -12,14 +12,14 @@ class CategoryService {
     }
   }
 
-  //   async findSubCategoryList({ mainidx, subidx }) {
-  //     try {
-  //       const result = await this.categoryRepository.findSubCategory({ mainidx, subidx });
-  //       return result;
-  //     } catch (e) {
-  //       throw new Error(e);
-  //     }
-  //   }
+    async findSubCategoryList({ mainidx, subidx }) {
+      try {
+        const result = await this.categoryRepository.findSubCategory({ mainidx, subidx });
+        return result;
+      } catch (e) {
+        throw new Error(e);
+      }
+    }
 }
 
 module.exports = CategoryService;

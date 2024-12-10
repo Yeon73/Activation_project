@@ -43,34 +43,34 @@ class AdminService {
     }
   }
 
-  // async userDelete({ nickname }) {
-  //   try {
-  //     const response = await this.adminRepository.userDestroy({ nickname });
-  //     console.log("#################", response);
-  //     return response;
-  //   } catch (e) {
-  //     next(e);
-  //   }
-  // }
+  async userDelete({ nickname }) {
+    try {
+      const response = await this.adminRepository.userDestroy({ nickname });
+      console.log("#################", response);
+      return response;
+    } catch (e) {
+      next(e);
+    }
+  }
 
-  // async boardsList() {
-  //   try {
-  //     const response = await this.adminRepository.boardList();
-  //     const boardCount = response.length;
-  //     // console.log("1check response : ", response);
-  //     // console.log("###~~~~~~", boardCount);
+  async boardsList() {
+    try {
+      const response = await this.adminRepository.boardList();
+      const boardCount = response.length;
+      // console.log("1check response : ", response);
+      // console.log("###~~~~~~", boardCount);
 
-  //     response.forEach((board) => {
-  //       board.register = new this.DateFormat(board.register).dateformat();
-  //     });
+      response.forEach((board) => {
+        board.register = new this.DateFormat(board.register).dateformat();
+      });
 
-  //     console.log("1check response : ", response);
+      console.log("1check response : ", response);
 
-  //     return { response, boardCount };
-  //   } catch (e) {
-  //     throw new Error(e);
-  //   }
-  // }
+      return { response, boardCount };
+    } catch (e) {
+      throw new Error(e);
+    }
+  }
 
   async extData({ boardidx, nickname }) {
     const comment = await this.boardRepository.findCommentsCount({ boardidx });

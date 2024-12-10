@@ -14,7 +14,7 @@ class UserController {
   async postUserCheck(req, res, next) {
     // console.log(`con :`, req.body);
     try {
-      // const { userid } = req.body;
+      const { userid } = req.body;
       const user = await this.userService.userCheck(req.body);
       res.status(201).json(user);
     } catch (e) {
@@ -58,7 +58,7 @@ class UserController {
       const token = await this.userService.modifyProfile(req.body);
       // console.log("check 용", req.body);
       // console.log("check 용", token);
-      // res.cookie('token', token)
+      res.cookie('token', token)
       res.json({ token });
     } catch (e) {
       next(e);

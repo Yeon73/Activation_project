@@ -12,14 +12,14 @@ class LikeRepository {
     }
   }
 
-  //   async findOne({ boardidx, nickname }) {
-  //     try {
-  //       const response = await this.Likes.findOne({ where: { boardidx, nickname }, raw: true });
-  //       return response;
-  //     } catch (e) {
-  //       throw new Error(e);
-  //     }
-  //   }
+    async findOne({ boardidx, nickname }) {
+      try {
+        const response = await this.Likes.findOne({ where: { boardidx, nickname }, raw: true });
+        return response;
+      } catch (e) {
+        throw new Error(e);
+      }
+    }
 
   async getLikes({ boardidx, nickname }) {
     try {
