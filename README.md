@@ -9,7 +9,7 @@ If studying English (such as making 900+ score in TOEIC :joy:) is on your mind, 
 
 This is Webpage Project named **ACTIVATION**, aiming to make:
 * **Sports Community Website where sportspeople can integrate to share their questions**
-* **Sports Community Website where people can design in one place from daily routines to regular calendars**
+* **Sports Community Website where people can share things from daily routines to regular calendars through community**
 * **Sports Community Website where people can decorate their personal profiles based on them**
 
 
