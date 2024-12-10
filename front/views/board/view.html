@@ -1,0 +1,53 @@
+{% extends '../layout/layout.html' %} {% block css %}
+
+<link rel="stylesheet" href="/css/index.css" />
+<link rel="stylesheet" href="/css/board/view.css" />
+<link rel="stylesheet" href="/css/board/comment.css" />
+
+{% endblock %} {% block content %} {% include "../layout/header.html" %}
+
+<div id="content_wrap">
+  <div id="content">
+    <div id="content_header">
+      <input id="boardidx" type="hidden" value="{{boardidx}}" />
+      <div id="subject"></div>
+      <div id="subcategory">
+        <ul id="subcategories"></ul>
+      </div>
+    </div>
+
+    <div id="content_body">
+      <div id="write_form">
+        <div id="write_subject"></div>
+        <div id="write_group">
+          <div id="write_info">
+            <img src="/img/users.png" />
+            <span id="nickname"></span>
+            <img src="/img/date.png" />
+            <span id="register"></span>
+            <img src="/img/hits.png" />
+            <span id="hit"></span>
+          </div>
+          <div id="write_content"></div>
+        </div>
+
+        <div id="write_btnbox">
+          <div id="write_hashbox"></div>
+
+          <div id="write_btn">
+            <button id="like">
+              <img src="/img/likes.png" />
+              <span></span>
+            </button>
+            <button id="delete">삭제하기</button>
+            <button id="modify">수정하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "../layout/comment.html" %} {% include "../layout/footer.html" %} {% endblock %} {% block js %}
+<script src="/js/module/board_view.js" type="module"></script>
+<script src="/js/lib/comment.js" type="module"></script>
+{% endblock %}

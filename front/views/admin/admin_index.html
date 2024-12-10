@@ -1,0 +1,82 @@
+{% extends '../layout/layout.html' %} {% block css %}
+
+<link rel="stylesheet" href="/css/admin/admin_header.css" />
+<link rel="stylesheet" href="/css/admin/admin_index.css" />
+
+{% endblock %} {% block content %}
+
+<div id="admin_wrap">
+  {% include "../layout/admin_header.html" %}
+
+  <div id="admin_content">
+    <div id="admin_menu">
+      <ul>
+        <li>
+          <img src="https://i.postimg.cc/rF6Mc2g2/Vector.png" />
+          <a href="/admins">Overview</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/0j7grrZR/Vector-1.png" />
+          <a href="/admins/users">Users</a>
+        </li>
+        <li>
+          <img src="https://i.postimg.cc/XN56sDWH/Vector-2.png" />
+          <a href="/admins/boards">Boards</a>
+        </li>
+
+        <li>
+          <img src="https://i.postimg.cc/2Skp8kZM/Vector-3.png" />
+          <a href="/admins/comments">Comments</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="admin_info">
+      <ul id="upper">
+        <li id="info_total">
+          <ul>
+            <li id="total_users">
+              <div>Total Users</div>
+              <span>
+                <img src="https://i.postimg.cc/qv5KM7Fv/Vector-1.png" />Local :
+                100명
+              </span>
+              <span>
+                <img src="https://i.postimg.cc/j2Ckp2nY/kakao-1.png" />Kakao :
+                100명
+              </span>
+            </li>
+            <li id="total_boards">
+              <div>Total Boards</div>
+              <span>
+                <img src="https://i.postimg.cc/mZY7NBPm/Vector.png" />3000
+              </span>
+            </li>
+            <li id="total_comments">
+              <div>Total Comments</div>
+              <span>
+                <img src="https://i.postimg.cc/3Rg0BFxk/Vector-2.png" />9548
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li id="info_users">
+          <div>Users</div>
+          <img src="https://i.postimg.cc/zGMth8Qx/image-10.png" />
+        </li>
+      </ul>
+      <ul id="under">
+        <li id="info_boards">
+          <div>Boards</div>
+          <img src="https://i.postimg.cc/zGMth8Qx/image-10.png" />
+        </li>
+        <li id="info_comments">
+          <div>Comments</div>
+          <img src="https://i.postimg.cc/zGMth8Qx/image-10.png" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

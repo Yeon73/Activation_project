@@ -1,36 +1,32 @@
-console.log('Initializing server...');
+require("dotenv").config();
+const app = require("./app");
+const { sequelize } = require("./models");
 
-// Load required modules
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/database');
+const fs = require("fs");
+const path = require("path");
 
-// Load environment variables
-dotenv.config({ path: './.env' });
-console.log('Environment variables loaded:', process.env.MONGO_URI);
+app.listen(process.env.PORT, async () => {
+  await sequelize.sync({ force: true });
 
-if (!process.env.MONGO_URI) {
-  console.error('MONGO_URI is not defined. Check your .env file.');
-  process.exit(1);
-}
+  // const category = require("./dummy/Categories_dummy");
+  // const subCategory = require("./dummy/SubCategories_dummy");
+  // const board = require("./dummy/Boards_dummy");
+  // const user = require("./dummy/Users_dummy");
 
-// Initialize Express app
-const app = express();
+  // for (let i = 0; i < category.length; i++) {
+  //   await sequelize.models.Categories.create(category[i]);
+  // }
+  // for (let i = 0; i < subCategory.length; i++) {
+  //   await sequelize.models.SubCategories.create(subCategory[i]);
+  // }
 
-// Middleware (example for parsing JSON)
-app.use(express.json());
+  // for (let i = 0; i < user.length; i++) {
+  //   await sequelize.models.Users.create(user[i]);
+  // }
 
-// Connect to MongoDB
-console.log('Connecting to MongoDB...');
-connectDB();
+  // for (let i = 0; i < board.length; i++) {
+  //   await sequelize.models.Boards.create(board[i]);
+  // }
 
-// Define a test route
-app.get('/', (req, res) => {
-  res.send('API is running...');
-});
-
-// Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Back Server Start ${process.env.PORT}`);
 });
