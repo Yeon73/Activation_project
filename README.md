@@ -8,12 +8,13 @@ I work in :speaking_head: English Language-Teaching Industry, mainly at private 
 If studying English (such as making 900+ score in TOEIC :joy:) is on your mind, you can contact me through **rlaquddus@gmail.com** freely.
 
 This is Webpage Project named **ACTIVATION**, aiming to make:
-* **Sports Community Website where sportspeople can integrate to share their questions**
+* **Sports Community Website where sportspeople can integrate to share their activities**
 * **Sports Community Website where people can share things from daily routines to regular calendars through community**
-* **Sports Community Website where people can decorate their personal profiles based on them**
+* **Sports Community Website where people can trade used-items or enjoy their competition**
 
-
-
+* **참고자료:** [[프로젝트] 커뮤니티 사이트 만들기 회고록](https://velog.io/@cloudcoke/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-%ED%9A%8C%EA%B3%A0%EB%A1%9D/)를 참고하여 제작하였습니다.
+* **개발 계획/공부 과정:** [BE 공부 자료](https://github.com/Yeon73/BE_BlogPJ/) 참고해주시면 감사하겠습니다.
+* **구동 영상:**  
 
 # STACKS
 
@@ -30,10 +31,5 @@ This is Webpage Project named **ACTIVATION**, aiming to make:
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 <img src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white"/>
 
-### Deploy
-
-### Deploy
-<img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white"/>
-<img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white"/>
 
 </div>
