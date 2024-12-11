@@ -45,6 +45,7 @@ body {
 #loginFrm > #header > h1 > a > img {
   width: 300px;
   height: 120px;
+  object-fit: fill;
   cursor: pointer;
 }
 
