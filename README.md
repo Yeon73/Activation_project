@@ -12,6 +12,18 @@ This is Webpage Project named **ACTIVATION**, aiming to make:
 * **Sports Community Website where people can share things from daily routines to regular calendars through community**
 * **Sports Community Website where people can trade used-items or enjoy their competition**
 
+# Functions
+* **Log in / Log out**
+* **Verifying and Modifying Member Information / Password hash function**
+* **Article on the board CRUD**
+* **Like the post function**
+* **Hash tag function**
+* **Comments**
+* **Point system**
+* **Administrators page !ADMIN**
+* **Disabling Posts !ADMIN**
+* **Setting Membership !ADMIN**
+
 
 # 비고
 
