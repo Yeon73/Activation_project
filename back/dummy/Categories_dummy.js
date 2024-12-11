@@ -1,7 +1,7 @@
 const Categories = [
   {
     mainidx: 0,
-    title: "Q&A",
+    title: "SPORTS",
   },
   {
     mainidx: 1,

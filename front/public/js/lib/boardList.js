@@ -1,21 +1,21 @@
 const adminBoardListTemplate = ({ image, boardidx, nickname, register, title, hit, mainidx, subidx, visible }) => {
   const mainCat = {
-    0: "Q&A",
+    0: "SPORTS",
     1: "커뮤니티",
     2: "공지사항",
   };
 
   const subCat = {
-    "Q&A": {
-      0: "레시피",
-      1: "조리도구",
+    "SPORTS": {
+      0: "중고품거래",
+      1: "대회",
     },
     커뮤니티: {
       0: "일상이야기",
       1: "모임",
     },
     공지사항: {
-      0: "Q&A",
+      0: "SPORTS",
       1: "커뮤니티",
     },
   };

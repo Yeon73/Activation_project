@@ -11,7 +11,7 @@ const categoryTitleRender = ({ categories, all = true }) => {
   const { SubCategories } = categories;
 
   const classList = {
-    "Q&A": "qna",
+    "SPORTS": "qna",
     커뮤니티: "community",
     공지사항: "notice",
   };

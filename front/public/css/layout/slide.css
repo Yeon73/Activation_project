@@ -24,6 +24,7 @@
 #topSlideBar > #slidePart > #slideShow > .slides > li > img {
   width: 1160px;
   height: 160px;
+  object-fit: cover;
   vertical-align: top;
 }
 

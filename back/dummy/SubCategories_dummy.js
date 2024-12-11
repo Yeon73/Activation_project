@@ -2,12 +2,12 @@ const SubCategories = [
   {
     mainidx: 0,
     subidx: 0,
-    title: "레시피",
+    title: "중고품거래",
   },
   {
     mainidx: 0,
     subidx: 1,
-    title: "조리도구",
+    title: "대회",
   },
   {
     mainidx: 1,
@@ -22,7 +22,7 @@ const SubCategories = [
   {
     mainidx: 2,
     subidx: 0,
-    title: "Q&A",
+    title: "SPORTS",
   },
   {
     mainidx: 2,

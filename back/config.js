@@ -23,9 +23,9 @@ const config = {
     },
   },
   kakao: {
-    host: env.KAKAO_HOST || "https://kakao.com",
+    host: env.KAKAO_HOST || "https://kauth.kakao.com",
     rest_api_key: env.REST_API_KEY || "your_rest_api_key",
-    redirect_uri: env.REDIRECT_URI || "https://your_redirect_uri",
+    redirect_uri: env.REDIRECT_URI || "http://localhost:3005/auth/kakao/callback",
     client_secret: env.CLIENT_SECRET || "your_client_secret",
   },
   server: {
